@@ -1,18 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Leyout from './styled/Leyout/Leyout';
 import TitleSection from './components/TitleSection/TitleSection';
-import { BrowserRouter as Router, Route} from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 
+class App extends Component {
+  state = {
+    login: false,
+  }
 
-const App = () => {
-  return (
-    <Leyout>
-      <Router>
-        <Route path='/' component={TitleSection}/>
-      </Router>
-    </Leyout>
-  );
+  render() {
+    return (
+      <Leyout>
+        <Router>
+          <Route path='/' exact component={TitleSection} />
+          
+        </Router>
+      </Leyout>);
+  }
 }
+
+
 
 
 
