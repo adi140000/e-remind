@@ -5,7 +5,7 @@ const LoginForm = styled.form`
     flex-direction:column;
     justify-content:space-around;
     align-items:center;
-    height:30vh;
+    height:35vh;
 `;
 
 export default LoginForm;

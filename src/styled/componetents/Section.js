@@ -8,9 +8,8 @@ const Section = styled.section`
         display: flex;
         justify-content:center;
         align-items:center;
-        font-size: 10rem;
-        font-weight:bold;
-        
+        flex-direction:column;        
+        font-weight:bold;        
 `;
 
 export default Section;

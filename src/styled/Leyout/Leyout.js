@@ -13,12 +13,11 @@ const GlobalStyled = createGlobalStyle`
         box-sizing:border-box;
     }
     body{
-        margin:0;
-        padding:0;       
+       
         color:${({ theme }) => theme.colors.font};     
         background-color:${({ theme }) => theme.colors.gray} ;
         font-family: 'Ubuntu', sans-serif;
-        font-size:10vw;
+        
     }
 `;
 

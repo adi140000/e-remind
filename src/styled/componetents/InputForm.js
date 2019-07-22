@@ -1,23 +1,15 @@
 import styled from 'styled-components';
 
 const InputForm = styled.input`
-
-    width:200px;
+    margin-top:30px;
+    width:250px;
     height:30px;
-    border-radius:10px; 
-    padding:10px 50px;
+    border:none;
+    border-radius:7px; 
+    padding:10px;
     outline:none;
     position: relative;
-    &::after{
-        content:'swsw';
-        display:block;
-        height:100%;
-        width:30px;
-        position:absolute;
-        top:0;
-        left:0;
-        background-color:${({theme})=>theme.colors.btn}
-    }
+    box-shadow: 12px 10px 5px 0px rgba(0,0,0,.3);
 `;
 
 export default InputForm;
