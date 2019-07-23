@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Redirect } from "react-router-dom";
 import Section from "../../styled/componetents/Section";
 import LoginForm from "../../styled/componetents/Form";
 import Button from "../../styled/componetents/Button";
@@ -9,20 +10,22 @@ import H1 from "../../styled/componetents/H1";
 class TitleSection extends Component {
     state = {
         login: '',
-        password:'',
+        password: '',
     }
 
     handleInput = (e) => {
         const { value, id } = e.target;
         this.setState({
-            [id]:value,
+            [id]: value,
         })
     }
 
     render() {
         const { login, password } = this.state;
+        const { doLogin } = this.props;
+        if (doLogin) return <Redirect to='/Account'/>;
         return (
-            <Section login>                
+            <Section login>
                 <H1>e-Remind</H1>
                 <LoginForm >
                     <Input
@@ -41,7 +44,9 @@ class TitleSection extends Component {
                     />
                     <Button>Zaloguj</Button>
                 </LoginForm>
-            </Section>);
+            </Section>
+        )
+
     }
 }
 
