@@ -5,18 +5,19 @@ import theme from '../Theme/Theme';
 
 const GlobalStyled = createGlobalStyle`
 
-@import url('https://fonts.googleapis.com/css?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
     
+  
     *{
         margin:0;
         padding:0;
         box-sizing:border-box;
+        font-family: 'Montserrat', sans-serif;
     }
-    body{
-       
+    body{       
         color:${({ theme }) => theme.colors.font};     
-        background-color:${({ theme }) => theme.colors.gray} ;
-        font-family: 'Ubuntu', sans-serif;
+        background-color:${({ theme }) => theme.colors.gray} ; 
+        overflow:hidden;  
         
     }
 `;

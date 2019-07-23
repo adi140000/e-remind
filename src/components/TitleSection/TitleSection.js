@@ -1,19 +1,44 @@
 import React, { Component } from 'react';
 import Section from "../../styled/componetents/Section";
-import LoginForm from "../../styled/componetents/LoginForm";
+import LoginForm from "../../styled/componetents/Form";
 import Button from "../../styled/componetents/Button";
-import InputForm from "../../styled/componetents/InputForm";
-import Remind from "../../styled/componetents/Remind";
+import Input from "../../styled/componetents/Input";
+import H1 from "../../styled/componetents/H1";
+
 
 class TitleSection extends Component {
-    state = {}
+    state = {
+        login: '',
+        password:'',
+    }
+
+    handleInput = (e) => {
+        const { value, id } = e.target;
+        this.setState({
+            [id]:value,
+        })
+    }
+
     render() {
+        const { login, password } = this.state;
         return (
-            <Section>
-                <Remind>e-Remind</Remind>
+            <Section login>                
+                <H1>e-Remind</H1>
                 <LoginForm >
-                    <InputForm />
-                    <InputForm />
+                    <Input
+                        placeholder='login'
+                        type='text'
+                        value={login}
+                        onChange={this.handleInput}
+                        id='login'
+                    />
+                    <Input
+                        placeholder='password'
+                        type='password'
+                        value={password}
+                        onChange={this.handleInput}
+                        id='password'
+                    />
                     <Button>Zaloguj</Button>
                 </LoginForm>
             </Section>);

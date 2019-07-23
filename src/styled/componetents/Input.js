@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const InputForm = styled.input`
+const Input = styled.input`
     margin-top:30px;
     width:250px;
     height:30px;
@@ -10,6 +10,11 @@ const InputForm = styled.input`
     outline:none;
     position: relative;
     box-shadow: 12px 10px 5px 0px rgba(0,0,0,.3);
+    font-weight:bold;
+    ::placeholder{
+        color:${({ theme }) => theme.colors.gray};
+        
+    }
 `;
 
-export default InputForm;
+export default Input;
