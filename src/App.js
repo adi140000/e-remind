@@ -1,21 +1,22 @@
-import React, { Component  } from 'react';
+import React, { Component } from 'react';
 import Leyout from './styled/Leyout/Leyout';
 import LoginSection from './components/LoginSection/LoginSection';
 import Account from './components/Account/Account';
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { Context } from './store/Context';
 
 class App extends Component {
-  state = {
-    doLogin: false,
-  }
+
 
   render() {
-    const { doLogin } = this.state;
+
     return (
       <Leyout>
         <Router>
-          <Route path='/' exact render={() => <LoginSection doLogin={doLogin} />} />     
-          <Route path='/account' exact render={() => <Account doLogin={doLogin} />} />   
+          <Context>
+            <Route path='/' exact component={LoginSection} />
+            <Route path='/account' exact component={Account} />
+          </Context>
         </Router>
       </Leyout>);
   }

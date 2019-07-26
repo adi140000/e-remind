@@ -6,16 +6,21 @@ const Form = styled.form`
     justify-content:space-around;
     align-items:center;
     height:35vh;
-    animation: appear 2s;  
+    animation: appear 3s;  
         
         @keyframes appear {
                 0%{
                         transform: translateX(-100vw);
                         opacity:0;
                 }
-                100%{
-                        transform: translateX(0);
+                70%{
+                    transform: translateX(10vw);
                         opacity:1;  
+
+                }
+                100%{
+                    transform: translateX(0);
+                        
                 }
         }
 `;
