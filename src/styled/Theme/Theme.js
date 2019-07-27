@@ -9,7 +9,7 @@ const Theme = {
 
     },
     fonts: {
-        
+        big: '2em'
     },
     img: {
         background,

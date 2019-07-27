@@ -8,6 +8,9 @@ const Nav = styled.nav`
     background-color: ${ props =>props.theme.colors.background};
     background-image: url(${props => props.theme.img.background});
     width:30vw;
-    height:100vh;
+    height:100vh;   
+    display:flex;
+    justify-content:center;
+    align-items:center;
 `
 export default Nav

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import Nav from '../../styled/componetents/Nav';
-import Section from '../../styled/componetents/Section';
+import NavBar from './parts/NavBar'
 import { ContextConsumer } from '../../store/Context';
 import { Redirect } from "react-router-dom";
 
@@ -16,8 +15,8 @@ class Account extends Component {
                     }
                     return (
                         <>
-                            <Nav />
-                            <Section />
+                           <NavBar/>
+                           
                         </>
                     )
                 }}
