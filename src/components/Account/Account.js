@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import Nav from '../../styled/componetents/Nav';
+import Section from '../../styled/componetents/Section';
 import { ContextConsumer } from '../../store/Context';
 import { Redirect } from "react-router-dom";
 
@@ -10,10 +12,13 @@ class Account extends Component {
             <ContextConsumer>
                 {({ isLogin }) => {
                     if (!isLogin) {
-                        return <Redirect to='/'/>
+                        return <Redirect to='/' />
                     }
                     return (
-                        <h1>Zalogowany</h1>
+                        <>
+                            <Nav />
+                            <Section />
+                        </>
                     )
                 }}
             </ContextConsumer>
