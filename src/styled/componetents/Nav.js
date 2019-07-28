@@ -10,7 +10,8 @@ const Nav = styled.nav`
     width:30vw;
     height:100vh;   
     display:flex;
-    justify-content:center;
+    flex-direction:column;
+    justify-content:space-around;
     align-items:center;
 `
 export default Nav

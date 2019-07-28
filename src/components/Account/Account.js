@@ -1,12 +1,21 @@
 import React, { Component } from 'react';
-import NavBar from './parts/NavBar'
+import NavBar from './NavBar/NavBar'
 import { ContextConsumer } from '../../store/Context';
 import { Redirect } from "react-router-dom";
+import Add from './pages/Add';
 
 class Account extends Component {
     state = {}
+    page = () => {
+        const { name } = this.props;
+        switch (name) {
+            case 'add':
+                return <Add />;               
+            default:
+                console.log('woow');
+        }
+    }
     render() {
-
         return (
             <ContextConsumer>
                 {({ isLogin }) => {
@@ -15,8 +24,9 @@ class Account extends Component {
                     }
                     return (
                         <>
-                           <NavBar/>
-                           
+                            <NavBar/>
+                            {this.page()}
+
                         </>
                     )
                 }}
