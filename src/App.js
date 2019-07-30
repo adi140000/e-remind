@@ -17,7 +17,8 @@ class App extends Component {
             <Route path='/' exact component={LoginSection} />
             <Route path='/account' exact component={Account} />
             <Route path='/account/add' exact render={()=>(<Account name='add' />)} />
-            <Route path='/account/delete' exact render={()=>(<Account name='delete'/>)} />
+            <Route path='/account/delete' exact render={() => (<Account name='delete' />)} />
+            <Route path='/account/find' exact render={()=>(<Account name='find'/>)} />
           </Context>
         </Router>
       </Leyout>);
