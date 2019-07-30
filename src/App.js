@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Leyout from './styled/Leyout/Leyout';
 import LoginSection from './components/LoginSection/LoginSection';
-import Account from './components/Account/Account';
+import NavBar from './components//NavBar'
+import Add from './components/Add'
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import { Context } from './store/Context';
 
@@ -15,10 +16,9 @@ class App extends Component {
         <Router>
           <Context>
             <Route path='/' exact component={LoginSection} />
-            <Route path='/account' exact component={Account} />
-            <Route path='/account/add' exact render={()=>(<Account name='add' />)} />
-            <Route path='/account/delete' exact render={() => (<Account name='delete' />)} />
-            <Route path='/account/find' exact render={()=>(<Account name='find'/>)} />
+            <Route path='/account'  component={NavBar} />
+            <Route path='/account/add' exact  component={Add}/>
+            
           </Context>
         </Router>
       </Leyout>);

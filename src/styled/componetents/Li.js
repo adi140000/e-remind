@@ -10,8 +10,10 @@ const Li = styled.li`
   align-items:center;
   justify-content:center;
   transition:background-color 1s;
+  font-weight:bold ;
   :hover{
-      background-color:${({theme})=>theme.colors.font};
+      background-color:${({ theme }) => theme.colors.font};
+      opacity:.7;
   }    
   :hover>.link{
         color:${({ theme }) => theme.colors.background};
