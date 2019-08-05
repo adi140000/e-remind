@@ -1,26 +1,39 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+
+const barOutSide = keyframes`
+    100%{
+        transform: translateY(50px);
+    }
+`
 
 const InnerBar = styled.div`
     width:100%;
     height:10%;
-    border-radius:5px;
-    transition:background-color .8s linear;
+    border-radius:${({ theme }) => theme.radius};
+    transition:background-color .5s linear , transform .5s;
     background-color:${({ hamburger, theme }) => hamburger ? theme.colors.font : theme.colors.background};
+    background-image: url(${props => props.theme.img.background});
     position:relative;
+    transform:${({hamburger})=>hamburger?'rotate(45deg)':'rotate(0)'};
     ::after,::before{
-        transition:background-color .8s linear;
+        transition:background-color .5s  linear , transform .5s;
         background-color:${({ hamburger, theme }) => hamburger ? theme.colors.font : theme.colors.background};
-        border-radius:5px;
+        background-image: url(${props => props.theme.img.background});
+        border-radius:${({ theme }) => theme.radius};
         content:'';
-        width:80%;
+        width:100%;
         height:100%;        
-        position:absolute;
-        transform:translateY(20px)
+        position:absolute;         
+        transform:${({ hamburger }) => hamburger ? 'rotate(90deg) ' : 'rotate(0) translateY(20px)'};
+       animation:${barOutSide} 1s;
+        
     }
-    ::before{
-        width:60%;
-        transform:translateY(-20px)
-    }
+    ::before{        
+        transform:${({hamburger})=>hamburger?'rotate(90deg) ':'rotate(0) translateY(-20px)'};
+    }    
+    
 `
+
+
 
 export default InnerBar;

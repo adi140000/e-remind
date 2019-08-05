@@ -11,6 +11,6 @@ const Hamburger = styled.div`
     align-items:center;
     z-index:1;
     cursor: pointer;
-    
+    overflow:hidden;
 `
 export default Hamburger;
