@@ -15,7 +15,7 @@ const Theme = {
     img: {
         background,
     },
-    radius:'5px'
+    radius:'10px',
 }
 
 export default Theme;

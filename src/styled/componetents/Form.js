@@ -13,11 +13,7 @@ const Form = styled.form`
                         transform: translateX(-100vw);
                         opacity:0;
                 }
-                70%{
-                    transform: translateX(10vw);
-                        opacity:1;  
-
-                }
+               
                 100%{
                     transform: translateX(0);
                         

@@ -17,8 +17,12 @@ const GlobalStyled = createGlobalStyle`
     }
     body{       
         color:${({ theme }) => theme.colors.font};     
-        background-color:${({theme})=>theme.colors.gray}; 
-        overflow:hidden;  
+        background-color:${({ theme }) => theme.colors.gray};
+        overflow-x:hidden;  
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        min-height:100vh;
         
     }
 `;

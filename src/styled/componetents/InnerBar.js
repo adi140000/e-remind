@@ -1,10 +1,6 @@
-import styled, { keyframes } from 'styled-components';
+import styled from 'styled-components';
 
-const barOutSide = keyframes`
-    100%{
-        transform: translateY(50px);
-    }
-`
+
 
 const InnerBar = styled.div`
     width:100%;
@@ -25,7 +21,7 @@ const InnerBar = styled.div`
         height:100%;        
         position:absolute;         
         transform:${({ hamburger }) => hamburger ? 'rotate(90deg) ' : 'rotate(0) translateY(20px)'};
-       animation:${barOutSide} 1s;
+       
         
     }
     ::before{        

@@ -8,6 +8,13 @@ export class Context extends Component {
         login:'',
         password: '',
         isLogin:true,
+        hamburger: true,
+    }
+
+    handleHamburger = () => {
+        this.setState(prevState => ({
+            hamburger: !prevState.hamburger,
+        }))
     }
 
     handleInput = (e) => {        
@@ -20,12 +27,13 @@ export class Context extends Component {
 
     render() {
         const { children } = this.props;
-        const { state, handleInput } = this;
+        const { state, handleInput,handleHamburger } = this;
         return (
             <CurrentContext.Provider
                 value={{                    
                     ...state,
-                    handleInput                    
+                    handleInput,
+                    handleHamburger
                 }}
             >
                 {children}

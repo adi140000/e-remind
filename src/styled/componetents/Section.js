@@ -2,15 +2,17 @@ import styled from 'styled-components';
 
 const Section = styled.section`           
         width:100vw;
-        height:100vh;
-        background-color: ${ props =>props.login?props.theme.colors.background:props.theme.colors.font};
-        background-image: url(${props=>props.login?props.theme.img.background:''});
+        min-height:100vh;
+        background-color: ${ ({login,theme}) => login?theme.colors.background:theme.colors.gray };
+        background-image: url(${props => props.login ? props.theme.img.background : ''});
         display: flex;
         justify-content:center;
         align-items:center;
         flex-direction:column;        
         font-weight:bold;  
-        
+        transition: transform .8s, filter .8s;
+        transform:${({ hamburger }) => hamburger ? 'translate(30vw)' : 'translate(0);'};
+        opacity:${({ hamburger }) => hamburger ? .6 : 1}
 `;
 
 export default Section;
