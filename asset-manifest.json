@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.js": "/e-remind/static/js/main.7d04e1ee.chunk.js",
+    "main.js.map": "/e-remind/static/js/main.7d04e1ee.chunk.js.map",
+    "runtime~main.js": "/e-remind/static/js/runtime~main.c52397a7.js",
+    "runtime~main.js.map": "/e-remind/static/js/runtime~main.c52397a7.js.map",
+    "static/js/2.020737a4.chunk.js": "/e-remind/static/js/2.020737a4.chunk.js",
+    "static/js/2.020737a4.chunk.js.map": "/e-remind/static/js/2.020737a4.chunk.js.map",
+    "index.html": "/e-remind/index.html",
+    "precache-manifest.7849d8282d0e7ced824d94cf5ceefdaa.js": "/e-remind/precache-manifest.7849d8282d0e7ced824d94cf5ceefdaa.js",
+    "service-worker.js": "/e-remind/service-worker.js",
+    "static/media/background.svg": "/e-remind/static/media/background.77d8de19.svg"
+  }
+}
