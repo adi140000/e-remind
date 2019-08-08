@@ -10,6 +10,7 @@ const Theme = {
     },
     fonts: {
         big: '2em',
+        medium: '1.2em',
         small:'.8em'
     },
     img: {

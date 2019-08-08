@@ -21,8 +21,7 @@ class App extends Component {
               <Route path='/account' exact render={() => <Controler>
                 <Dashboard />
               </Controler>} />
-
-              <Route path='/account/add' exact render={() => <Controler>
+              <Route path='/account/add'  render={() => <Controler>
                 <Add />
               </Controler>} />
             </Switch>

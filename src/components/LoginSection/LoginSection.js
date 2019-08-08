@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Redirect } from "react-router-dom";
 import Section from "../../styled/componetents/Section";
-import LoginForm from "../../styled/componetents/Form";
+import Form from "../../styled/componetents/Form";
 import Button from "../../styled/componetents/Button";
 import Input from "../../styled/componetents/Input";
 import H1 from "../../styled/componetents/H1";
@@ -19,7 +19,7 @@ class TitleSection extends Component {
                     return (
                         <Section login>
                             <H1>e-Remind</H1>
-                            <LoginForm >
+                            <Form >
                                 <Input
                                     placeholder='login'
                                     type='text'
@@ -35,7 +35,7 @@ class TitleSection extends Component {
                                     id='password'
                                 />
                                 <Button>Zaloguj</Button>
-                            </LoginForm>
+                            </Form>
                         </Section>)
                 }}
             </ContextConsumer>

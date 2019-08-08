@@ -22,7 +22,6 @@ const Controler = (props) => {
                             <Main >
                                 {props.children}
                             </Main>
-
                         </Section>
                     </>
                 )

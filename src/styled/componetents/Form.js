@@ -5,7 +5,9 @@ const Form = styled.form`
     flex-direction:column;
     justify-content:space-around;
     align-items:center;
-    height:35vh;
+    min-height:35vh;
+    padding-bottom:30px;
+    width:${({option})=>option?'100%':''};      
     animation: appear 3s;  
         
         @keyframes appear {

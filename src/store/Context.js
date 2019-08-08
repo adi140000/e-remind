@@ -8,7 +8,7 @@ export class Context extends Component {
         login:'',
         password: '',
         isLogin:true,
-        hamburger: true,
+        hamburger: false,
     }
 
     handleHamburger = () => {

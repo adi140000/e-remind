@@ -11,13 +11,13 @@ import { ContextConsumer } from '../store/Context'
 
 
 class NavBar extends Component {
-   
+
     render() {
-        
+
         return (
             <ContextConsumer>
-                {({hamburger ,handleHamburger }) => {
-                 
+                {({ hamburger, handleHamburger }) => {
+
                     return (
                         <>
                             <Hamburger onClick={handleHamburger}>
@@ -25,9 +25,10 @@ class NavBar extends Component {
                             </Hamburger>
                             <Nav hamburger={hamburger}>
                                 <Ul main>
+                                    <Li><StyledNavLink activeClassName='selected' className='link' to='/account/'>Sprawdz</StyledNavLink></Li>
                                     <Li><StyledNavLink activeClassName='selected' className='link' to='/account/add'>Dodaj produkt</StyledNavLink></Li>
-                                    <Li><StyledNavLink activeClassName='selected' className='link' to='/account/delete'>Usun produkt</StyledNavLink></Li>
-                                    <Li><StyledNavLink activeClassName='selected' className='link' to='/account/find'>Znajdz produkt</StyledNavLink></Li>
+                                    <Li><StyledNavLink activeClassName='selected' className='link' to='/account/edit'>Edytuj produkt</StyledNavLink></Li>
+
                                 </Ul>
                                 <Footer>
                                     Copy Adrian Żmuda
