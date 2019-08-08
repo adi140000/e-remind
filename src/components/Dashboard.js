@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import H1Title from '../styled/componetents/H1Title';
 
 
 class Dashboard extends Component {
@@ -8,7 +9,9 @@ class Dashboard extends Component {
     }
     render() {
         return (
-            <></>)
+            <>
+               <H1Title>Sprawdz !</H1Title> 
+            </>)
     }
 }
 

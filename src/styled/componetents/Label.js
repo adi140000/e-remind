@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import Theme from '../Theme/Theme';
+
 
 const Label = styled.label`
     font-size: ${({ theme }) => theme.fonts.small};

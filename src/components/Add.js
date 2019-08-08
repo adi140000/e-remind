@@ -3,7 +3,8 @@ import Form from '../styled/componetents/Form';
 import Input from '../styled/componetents/Input';
 import Label from '../styled/componetents/Label';
 import Div from '../styled/componetents/Div';
-
+import Button from '../styled/componetents/Button';
+import H1Title from '../styled/componetents/H1Title';
 
 class Add extends Component {
     state = {
@@ -11,6 +12,8 @@ class Add extends Component {
     }
     render() {
         return (
+            <>
+            <H1Title>Dodaj produkt</H1Title>
             <Form option>
                 <Div>
                     <Label>Nazwa:</Label>
@@ -34,9 +37,10 @@ class Add extends Component {
                         type='date'
                     />
                 </Div>
+                <Button>Dodaj</Button>
 
-
-            </Form>
+                </Form>
+                </>
         )
     }
 }
