@@ -4,7 +4,7 @@ import LoginSection from './components/LoginSection/LoginSection';
 import Add from './components/Add';
 import Dashboard from './components/Dashboard'
 import Controler from './components/Controler/Controler'
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, HashRouter, Route, Switch } from "react-router-dom";
 import { Context } from './store/Context';
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
 
     return (
       <Leyout>
-        <Router basename={process.env.PUBLIC_URL}>
+        <HashRouter basename={process.env.PUBLIC_URL}>
           <Context>
             <Switch>
               <Route path='/' exact component={LoginSection} />
@@ -29,7 +29,7 @@ class App extends Component {
               </Controler>} />
             </Switch>
           </Context>
-        </Router>
+        </HashRouter>
       </Leyout >);
   }
 }
