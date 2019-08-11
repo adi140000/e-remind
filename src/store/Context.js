@@ -7,7 +7,7 @@ export class Context extends Component {
     state = {
         login:'',
         password: '',
-        isLogin:false,
+        isLogin:true,
         hamburger: false,
     }
 

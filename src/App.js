@@ -14,7 +14,7 @@ class App extends Component {
 
     return (
       <Leyout>
-        <Router>
+        <Router basename={process.env.PUBLIC_URL}>
           <Context>
             <Switch>
               <Route path='/' exact component={LoginSection} />
@@ -22,10 +22,10 @@ class App extends Component {
                 <Dashboard />
               </Controler>} />
               <Route path='/account/add' render={() => <Controler>
-                <Add />                
+                <Add />
               </Controler>} />
               <Route path='/account/edit' render={() => <Controler>
-                <Add />                
+                <Add />
               </Controler>} />
             </Switch>
           </Context>

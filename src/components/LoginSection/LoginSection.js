@@ -14,7 +14,7 @@ class TitleSection extends Component {
             <ContextConsumer>
                 {({ login, password, isLogin, handleInput }) => {
                     if (isLogin) {
-                        return <Redirect to='/account'/>
+                        return <Redirect to='/account/dashboard'/>
                     }
                     return (
                         <Section login>
