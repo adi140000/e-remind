@@ -25,7 +25,7 @@ class NavBar extends Component {
                             </Hamburger>
                             <Nav hamburger={hamburger}>
                                 <Ul main>
-                                    <Li><StyledNavLink activeClassName='selected' className='link' to='/account/d'>Sprawdz</StyledNavLink></Li>
+                                    <Li><StyledNavLink activeClassName='selected' className='link' to='/account/dashboard'>Sprawdz</StyledNavLink></Li>
                                     <Li><StyledNavLink activeClassName='selected' className='link' to='/account/add'>Dodaj produkt</StyledNavLink></Li>
                                     <Li><StyledNavLink activeClassName='selected' className='link' to='/account/edit'>Edytuj produkt</StyledNavLink></Li>
 

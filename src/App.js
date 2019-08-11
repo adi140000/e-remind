@@ -18,11 +18,14 @@ class App extends Component {
           <Context>
             <Switch>
               <Route path='/' exact component={LoginSection} />
-              <Route exact path='/account/d'  render={() => <Controler>
+              <Route exact path='/account/dashboard' render={() => <Controler>
                 <Dashboard />
               </Controler>} />
-              <Route exact path='/account/add'   render={() => <Controler>
-                <Add />
+              <Route path='/account/add' render={() => <Controler>
+                <Add />                
+              </Controler>} />
+              <Route path='/account/edit' render={() => <Controler>
+                <Add />                
               </Controler>} />
             </Switch>
           </Context>
