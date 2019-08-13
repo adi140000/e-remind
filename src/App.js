@@ -14,7 +14,7 @@ class App extends Component {
 
     return (
       <Leyout>
-        <HashRouter basename={process.env.PUBLIC_URL}>
+        <Router basename={process.env.PUBLIC_URL}>
           <Context>
             <Switch>
               <Route path='/' exact component={LoginSection} />
@@ -30,7 +30,7 @@ class App extends Component {
               </Controler>} />
             </Switch>
           </Context>
-        </HashRouter>
+        </Router>
       </Leyout >);
   }
 }

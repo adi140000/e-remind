@@ -7,8 +7,9 @@ const Form = styled.form`
     align-items:center;
     min-height:35vh;
     padding-bottom:30px;
-    width:${({option})=>option?'100%':''};      
-    animation: appear 3s;  
+    width:${({ option }) => option ? '100%' : ''}; 
+    ${({ login }) => login && 'animation: appear 3s; '}     
+    
         
         @keyframes appear {
                 0%{

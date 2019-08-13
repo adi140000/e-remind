@@ -12,7 +12,7 @@ const Section = styled.section`
         font-weight:bold;  
         transition: transform .8s, filter .8s;
         transform:${({ hamburger }) => hamburger ? 'translate(30vw)' : 'translate(0);'};
-        opacity:${({ hamburger }) => hamburger ? .6 : 1}
+        
 `;
 
 export default Section;

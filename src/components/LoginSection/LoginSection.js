@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Redirect } from "react-router-dom";
 import Section from "../../styled/componetents/Section";
 import Form from "../../styled/componetents/Form";
-import Button from "../../styled/componetents/Button";
+import Submit from "../../styled/componetents/Submit";
 import Input from "../../styled/componetents/Input";
 import H1 from "../../styled/componetents/H1";
 import { ContextConsumer } from '../../store/Context'
@@ -17,9 +17,11 @@ class TitleSection extends Component {
                         return <Redirect to='/account/dashboard'/>
                     }
                     return (
-                        <Section login>
+                        <Section
+                            login>
                             <H1>e-Remind</H1>
-                            <Form >
+                            <Form
+                                login>
                                 <Input
                                     placeholder='login'
                                     type='text'
@@ -34,7 +36,9 @@ class TitleSection extends Component {
                                     onChange={handleInput}
                                     id='password'
                                 />
-                                <Button>Zaloguj</Button>
+                                <Submit
+                                        type='submit'
+                                    value='Zaloguj' />
                             </Form>
                         </Section>)
                 }}
