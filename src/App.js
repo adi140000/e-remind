@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import Leyout from './styled/Leyout/Leyout';
 import LoginSection from './components/LoginSection/LoginSection';
 import Add from './components/Add';
+import Edit from './components/Edit';
 import Dashboard from './components/Dashboard'
 import Controler from './components/Controler/Controler'
-import { BrowserRouter as Router, HashRouter,Redirect, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router,  Redirect, Route, Switch } from "react-router-dom";
 import { Context } from './store/Context';
 
 class App extends Component {
@@ -18,16 +19,10 @@ class App extends Component {
           <Context>
             <Switch>
               <Route path='/' exact component={LoginSection} />
-              <Route exact path='/account/' render={()=><Redirect to='/account/dashboard'/>}/>
-              <Route exact path='/account/dashboard' render={() => <Controler>
-                <Dashboard />
-              </Controler>} />
-              <Route path='/account/add' render={() => <Controler>
-                <Add />
-              </Controler>} />
-              <Route path='/account/edit' render={() => <Controler>
-                <Add />
-              </Controler>} />
+              <Route exact path='/account/' render={() => <Redirect to='/account/dashboard' />} />
+              <Route exact path='/account/dashboard' component={Controler(Dashboard)} />
+              <Route path='/account/add' component={Controler(Add)} />
+              <Route path='/account/edit' component={Controler(Edit)}/>
             </Switch>
           </Context>
         </Router>

@@ -8,7 +8,7 @@ import Section from '../../styled/componetents/Section';
 
 
 
-const Controler = (props) => {
+const Controler = () => {
     return (
         <ContextConsumer>
             {({ isLogin, hamburger }) => {
@@ -20,7 +20,7 @@ const Controler = (props) => {
                         <NavBar />
                         <Section hamburger={hamburger} >
                             <Main >
-                                {props.children}
+
                             </Main>
                         </Section>
                     </>

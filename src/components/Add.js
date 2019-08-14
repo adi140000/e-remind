@@ -11,7 +11,7 @@ class Add extends Component {
     month = new Date().getMonth() + 1;
     year = new Date().getFullYear();
 
-    today = `${this.year}-${this.month < 10 ? '0' + this.month : this.month}-${this.day}`
+    today = `${this.year}-${this.month < 10 ? '0' + this.month : this.month}-${this.day<10?'0'+this.day:this.day}`
     state = {
         title: '',
         code: '',
@@ -19,6 +19,8 @@ class Add extends Component {
         date: this.today
 
     }
+
+    
 
     handelInput = (e) => {
         const { id, value } = e.target;

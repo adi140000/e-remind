@@ -7,7 +7,21 @@ export class Context extends Component {
     state = {
         login:'',
         password: '',
-        isLogin:false,
+        products: [
+            {
+                title: 'Ajax',
+                code: '1290',
+                amount: '19',
+                date:'2020-10-10'
+            },
+            {
+                title: 'Domestos',
+                code: '122',
+                amount: '19',
+                date:'2020-10-10'
+            }
+        ],
+        isLogin:true,
         hamburger: false,
     }
 
