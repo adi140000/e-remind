@@ -20,9 +20,9 @@ class App extends Component {
             <Switch>
               <Route path='/' exact component={LoginSection} />
               <Route exact path='/account/' render={() => <Redirect to='/account/dashboard' />} />
-              <Route exact path='/account/dashboard' component={Controler(Dashboard)} />
-              <Route path='/account/add' component={Controler(Add)} />
-              <Route path='/account/edit' component={Controler(Edit)}/>
+              <Route exact path='/account/dashboard' render={() => Controler(Dashboard)} />
+              <Route path='/account/add' render={() => Controler(Add)} />
+              <Route path='/account/edit' render={() => Controler(Edit)}/>
             </Switch>
           </Context>
         </Router>
