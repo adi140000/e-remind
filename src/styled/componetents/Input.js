@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const Input = styled.input`
-    margin-top:30px;
+    margin-top:15px;
     width:250px;
     height:30px;
     border:none;
@@ -11,6 +11,7 @@ const Input = styled.input`
     position: relative;
     box-shadow: 12px 10px 5px 0px rgba(0,0,0,.3);
     font-weight:bold;
+   
     ::placeholder{
         color:${({ theme }) => theme.colors.gray};
         

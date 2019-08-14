@@ -8,10 +8,11 @@ import Section from '../../styled/componetents/Section';
 
 
 
-const Controler = () => {
+const Controler = (Component) => {
+    
     return (
         <ContextConsumer>
-            {({ isLogin, hamburger }) => {
+            {({ isLogin, hamburger,products }) => {
                 if (!isLogin) {
                     return <Redirect to='/' />
                 }
@@ -20,7 +21,7 @@ const Controler = () => {
                         <NavBar />
                         <Section hamburger={hamburger} >
                             <Main >
-
+                                <Component products={products} />
                             </Main>
                         </Section>
                     </>

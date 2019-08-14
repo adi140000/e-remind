@@ -22,7 +22,7 @@ export class Context extends Component {
             }
         ],
         isLogin:true,
-        hamburger: false,
+        hamburger:false
     }
 
     handleHamburger = () => {
