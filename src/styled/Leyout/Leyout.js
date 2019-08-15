@@ -16,7 +16,7 @@ const GlobalStyled = createGlobalStyle`
         
     }
     body{       
-        color:${({ theme }) => theme.colors.font};     
+        color:${({ theme }) => theme.colors.bg2};     
         background-color:${({ theme }) => theme.colors.gray};
         overflow-x:hidden;  
         display:flex;

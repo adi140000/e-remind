@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
 
-const Nav = styled.nav`
-    border-radius:${({ theme }) => theme.radius};
+const Nav = styled.nav`    
     z-index:1;
     position:fixed;
     top:0;

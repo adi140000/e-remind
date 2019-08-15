@@ -6,12 +6,13 @@ import Div from '../styled/componetents/Div';
 import Submit from '../styled/componetents/Submit';
 import H1Title from '../styled/componetents/H1Title';
 
+
 class Add extends Component {
     day = new Date().getDate();
     month = new Date().getMonth() + 1;
     year = new Date().getFullYear();
 
-    today = `${this.year}-${this.month < 10 ? '0' + this.month : this.month}-${this.day<10?'0'+this.day:this.day}`
+    today = `${this.year}-${this.month < 10 ? '0' + this.month : this.month}-${this.day < 10 ? '0' + this.day : this.day}`
     state = {
         title: '',
         code: '',
@@ -20,7 +21,7 @@ class Add extends Component {
 
     }
 
-    
+
 
     handelInput = (e) => {
         const { id, value } = e.target;
@@ -43,13 +44,13 @@ class Add extends Component {
                     option
                     id='add'
                     onSubmit={this.handleForm}
-                   >
+                >
                     <Div>
                         <Label
                             htmlFor='title'
                         >Nazwa:</Label>
                         <Input
-
+                            placeholder='nazwa'
                             id='title'
                             value={title}
                             onChange={this.handelInput}
@@ -60,6 +61,7 @@ class Add extends Component {
                             htmlFor='code'
                         >Kod:</Label>
                         <Input
+                            placeholder='kod'
                             id='code'
                             value={code}
                             onChange={this.handelInput}
@@ -70,6 +72,7 @@ class Add extends Component {
                             htmlFor='amount'
                         >Ilosc:</Label>
                         <Input
+                            placeholder='ilosc'
                             type='number'
                             id='amount'
                             value={amount}
@@ -83,7 +86,7 @@ class Add extends Component {
                         >
                             Data zakonczenia:</Label>
                         <Input
-
+                            placeholder='data'
                             type='date'
                             id='date'
                             value={date}
@@ -92,8 +95,8 @@ class Add extends Component {
                         />
                     </Div>
                     <Submit
-                        type="submit"                        
-                        value='Dodaj'                        
+                        type="submit"
+                        value='Dodaj'
                     />
 
                 </Form>

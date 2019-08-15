@@ -10,9 +10,7 @@ const Div = styled.div`
     padding: 20px;
     min-width:80%;
     color:${({ theme }) => theme.colors.background};
-    &:hover>div>button{
-        display:block;
-    }
+   
 
 `
 

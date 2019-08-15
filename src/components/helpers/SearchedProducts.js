@@ -8,6 +8,7 @@ import IconButton from '../../styled/componetents/IconButton';
 
 
 
+
 const SearchedProduct = ({ title, code, amount, date }) => {
     return (
         <Li>
@@ -32,14 +33,15 @@ const SearchedProduct = ({ title, code, amount, date }) => {
                     </Span>
                 </DivInner>
                 <DivInner edit>
-                    <IconButton>
-
+                    <IconButton edit>
+                        <i class="fas fa-edit"></i>
                     </IconButton>
-                    <IconButton>
-
+                    <IconButton edit>
+                        <i class="fas fa-trash"></i>
                     </IconButton>
+
                 </DivInner>
-
+                
             </Div>
 
         </Li>

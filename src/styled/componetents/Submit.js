@@ -4,7 +4,7 @@ const Submit = styled.input`
 
     border:none;
     background-color:${({ theme }) => theme.colors.btn};  
-    color:${({ theme }) => theme.colors.font} ;  
+    color:${({ theme }) => theme.colors.bg2} ;  
     border-radius:${({ theme }) => theme.radius}; 
     padding:10px 20px;
     outline:none;
@@ -15,7 +15,7 @@ const Submit = styled.input`
     transition: .4s  color , .3s background-color;
     :hover{
         color:${({ theme }) => theme.colors.btn};
-        background-color:${({ theme }) => theme.colors.font};
+        background-color:${({ theme }) => theme.colors.bg2};
     }
 `;
 
