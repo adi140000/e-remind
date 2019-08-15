@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 const Li = styled.li`
     width:100%;  
@@ -8,11 +8,12 @@ const Li = styled.li`
   box-sizing:border-box;
   display:flex;
   align-items:center;
+  opacity:1;
   justify-content:center;
-  transition:background-color 1s;
+  transition:background-color 1s ,opacity .5s;
   font-weight:bold ;
   :hover{
-      background-color:${({ theme }) => theme.colors.font};
+        ${({ nav }) => nav && bg}
       opacity:.7;
   }    
   :hover>.link{
@@ -20,5 +21,9 @@ const Li = styled.li`
     }
     
 `
+
+const bg = css`
+    background-color:${({ theme }) => theme.colors.bg2};
+`;
 
 export default Li;

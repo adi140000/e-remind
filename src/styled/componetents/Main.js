@@ -7,7 +7,7 @@ const Main = styled.main`
     align-items:center;
     width:80vw;
     min-height:80vh;
-    background-color: ${({ theme }) => theme.colors.font};
+    background-color: ${({ theme }) => theme.colors.bg2};
     box-shadow: 1px -1px 21px 6px rgba(0,0,0,0.2);
     border-radius:${({ theme }) => theme.radius};
     padding:40px;

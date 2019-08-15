@@ -74,6 +74,7 @@ class Add extends Component {
                             id='amount'
                             value={amount}
                             onChange={this.handelInput}
+                            min='1'
                         />
                     </Div>
                     <Div>

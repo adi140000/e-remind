@@ -4,7 +4,7 @@ import LoginSection from './components/LoginSection/LoginSection';
 import Add from './components/Add';
 import Edit from './components/Edit';
 import Dashboard from './components/Dashboard'
-import Controler from './components/Controler/Controler'
+import Controler from './components/Controller/Controller'
 import { BrowserRouter as Router, Redirect, Route, Switch } from "react-router-dom";
 import { Context } from './store/Context';
 

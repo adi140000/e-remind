@@ -3,9 +3,10 @@ import background from '../../img/background.svg';
 const Theme = {
     colors: {
         background:'#40394b' ,
-        gray: '#a7a7a8',
-        font: '#ededf5',
-        btn: '#4a7fd4'
+        gray: '#d8dde6',
+        bg2: '#ededf5',
+        btn: '#4a7fd4',
+        font:'#969799'
 
     },
     fonts: {
