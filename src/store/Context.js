@@ -9,12 +9,14 @@ export class Context extends Component {
         password: '',
         products: [
             {
+                id:'1',
                 title: 'Ajax wdwwddwede wwddw wwddd',
                 code: '1290',
                 amount: '19',
                 date:'2020-10-10'
             },
             {
+                id:'2',
                 title: 'Domestos',
                 code: '122',
                 amount: '19',

@@ -28,7 +28,7 @@ class Add extends Component {
         this.setState({
             [id]: value,
         })
-        console.log(this.today)
+       
     }
 
     handleForm = (e) => {

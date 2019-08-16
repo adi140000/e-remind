@@ -12,11 +12,37 @@ import IconButton from '../styled/componetents/IconButton';
 
 class Edit extends Component {
 
+    state = {
+        search: '',
+        thisProducts: [],
+    }
 
+    handleInput = (e) => {
+        const { value } = e.target;        
+        this.setState({
+            search:value
+        })
+        
+    }
 
-    render() {
+    handleButton = () => {
         const { products } = this.props;
-        const MatchedProducts = products.map(item => (<SearchedProduct {...item} />))
+        let { search } = this.state;
+        const thisProducts = products.filter(({ title }) => {
+            title=title.toLowerCase();
+            search = search.toLowerCase();
+            return title.includes(search);
+        });
+        this.setState({
+            thisProducts
+        })
+        
+    }
+
+
+    render() {        
+        const { search ,thisProducts} = this.state;
+        const MatchedProducts =thisProducts.map(item => (<SearchedProduct key={item.id} {...item} />));        
         return (
             <>
                 <H1Title>Edytuj produkt</H1Title>
@@ -27,9 +53,15 @@ class Edit extends Component {
                     <DivSearch>
                         <Input
                             id='search'
-                            placeholder='szukaj...' />
-                        <IconButton>
-                            <i class="fas fa-search"></i>
+                            placeholder='szukaj...'
+                            value={search}
+                            onChange={this.handleInput}
+                        />
+                           
+                        <IconButton
+                            onClick={this.handleButton}
+                        >
+                            <i className="fas fa-search"></i>
                         </IconButton>
                     </DivSearch>
                     
@@ -38,7 +70,6 @@ class Edit extends Component {
                     <Ul>
                         {MatchedProducts}
                     </Ul>
-
                 </Article>
             </>
         );

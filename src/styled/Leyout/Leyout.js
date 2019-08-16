@@ -32,7 +32,6 @@ const Leyout = ({ children }) => {
     return (
         <ThemeProvider theme={theme}>
             <>
-
                 <GlobalStyled />
                 {children}
             </>
