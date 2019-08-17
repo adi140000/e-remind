@@ -12,7 +12,7 @@ const Controler = (Component) => {
     
     return (
         <ContextConsumer>
-            {({ isLogin, hamburger,products }) => {
+            {({ isLogin, hamburger,products,searchProducts }) => {
                 if (!isLogin) {
                     return <Redirect to='/' />
                 }
@@ -21,7 +21,7 @@ const Controler = (Component) => {
                         <NavBar />
                         <Section hamburger={hamburger} >
                             <Main >
-                                <Component products={products} />
+                                <Component products={products} searchProducts={searchProducts} />
                             </Main>
                         </Section>
                     </>

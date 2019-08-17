@@ -11,8 +11,8 @@ const Theme = {
     },
     fonts: {
         big: '2em',
-        medium: '1.2em',
-        small:'.8em'
+        medium: '1.4em',
+        small:'1em'
     },
     img: {
         background,

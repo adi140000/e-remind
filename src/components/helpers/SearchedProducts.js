@@ -9,7 +9,7 @@ import IconButton from '../../styled/componetents/IconButton';
 
 
 
-const SearchedProduct = ({title, code, amount, date }) => {
+const SearchedProduct = ({id,title, code, amount, date }) => {
     return (
         <Li>
             <Div edit>
