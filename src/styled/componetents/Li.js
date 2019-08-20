@@ -4,8 +4,7 @@ const Li = styled.li`
     width:100%;  
     cursor:pointer;
     padding:15px;   
-    border-radius:10px;
-  box-sizing:border-box;
+    border-radius:10px;  
   display:flex;
   align-items:center;
   opacity:.7;

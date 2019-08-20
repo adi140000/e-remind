@@ -16,7 +16,7 @@ class Edit extends Component {
 
     state = {
         search: '',
-        
+
     }
 
     handleInput = (e) => {
@@ -28,9 +28,20 @@ class Edit extends Component {
     }
 
     handleButton = () => {
-        let { search } = this.state
+        const { search } = this.state
         const { searchProducts } = this.props;
         searchProducts(search);
+
+
+    }
+
+    handlePressKey = (e) => {
+        if (e.charCode === 13) {
+            const { search } = this.state
+            const { searchProducts } = this.props;
+            searchProducts(search);
+        }
+
 
     }
 
@@ -52,6 +63,7 @@ class Edit extends Component {
                             placeholder='szukaj...'
                             value={search}
                             onChange={this.handleInput}
+                            onKeyPress={this.handlePressKey}
                         />
 
                         <IconButton
@@ -60,7 +72,7 @@ class Edit extends Component {
                             <i className="fas fa-search"></i>
                         </IconButton>
                     </DivSearch>
-                    <Radio type='radio'/>                    
+
                 </Div>
                 <Article>
                     {MatchedProducts.length > 0 ? <Ul>
