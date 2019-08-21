@@ -9,11 +9,16 @@ import SearchedProduct from './helpers/SearchedProducts'
 import Input from '../styled/componetents/Input';
 import DivSearch from '../styled/componetents/DivSearch';
 import IconButton from '../styled/componetents/IconButton';
-import Radio from '../styled/componetents/Radio';
+
 
 
 class Edit extends Component {
 
+    componentDidMount = () => {
+
+        console.log(this.props)
+
+    }
     state = {
         search: '',
 

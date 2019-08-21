@@ -27,10 +27,10 @@ class Add extends Component {
         const { id, value } = e.target;
         this.setState({
             [id]: value,
-        })
-       
+        })     
     }
 
+   
     handleForm = (e) => {
         e.preventDefault()
 

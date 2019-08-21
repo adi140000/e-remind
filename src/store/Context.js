@@ -7,14 +7,14 @@ const temProducts= [
         title: 'Ajax wdwwddwede wwddw wwddd',
         code: '1290',
         amount: '19',
-        date:'2020-10-10'
+        date:'2019-09-20'
     },
     {
         id:'2',
         title: 'Domestos',
         code: '122',
         amount: '19',
-        date:'2020-10-10'
+        date:'2021-12-10'
     }
 ]
 
@@ -59,16 +59,30 @@ export class Context extends Component {
         })
     }
 
+    checkDate = (scope) => {
+        const now = Date.parse(new Date());
+        const products = temProducts.filter(({ date }) => {
+            const js = Date.parse(date);
+            const result = js - now;
+            console.log(result);
+            return result < scope;
+        })
+        this.setState({
+            products
+        })
+    }
+
     render() {
         const { children } = this.props;
-        const { state, handleInput,handleHamburger,searchProducts } = this;
+        const { state, handleInput,handleHamburger,searchProducts,checkDate } = this;
         return (
             <CurrentContext.Provider
                 value={{                    
                     ...state,
                     handleInput,
                     handleHamburger,
-                    searchProducts
+                    searchProducts,
+                    checkDate
                 }}
             >
                 {children}
