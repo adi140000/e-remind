@@ -13,12 +13,7 @@ import IconButton from '../styled/componetents/IconButton';
 
 
 class Edit extends Component {
-
-    componentDidMount = () => {
-
-        console.log(this.props)
-
-    }
+   
     state = {
         search: '',
 

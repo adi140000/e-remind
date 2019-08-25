@@ -12,16 +12,18 @@ class TitleSection extends Component {
     render() {
         return (
             <ContextConsumer>
-                {({ login, password, isLogin, handleInput }) => {
+                {({ login, password, isLogin, handleInput, handleLogin }) => {
                     if (isLogin) {
-                        return <Redirect to='/account/dashboard'/>
+                        return <Redirect to='/account' />
                     }
                     return (
                         <Section
                             login>
                             <H1>e-Remind</H1>
                             <Form
-                                login>
+                                login
+                                onSubmit={handleLogin}
+                            >
                                 <Input
                                     placeholder='login'
                                     type='text'
@@ -37,8 +39,9 @@ class TitleSection extends Component {
                                     id='password'
                                 />
                                 <Submit
-                                        type='submit'
-                                    value='Zaloguj' />
+                                    type='submit'
+                                    value='Zaloguj'
+                                />
                             </Form>
                         </Section>)
                 }}
